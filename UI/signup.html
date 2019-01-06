@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <div class="navbar">
+        <div class="signnav">
             <div id="logo">    
                 <h1><span class="brand"><i class="fas fa-users"></i> Questioner</h1>
             </div>
@@ -24,18 +24,33 @@
         </div>
     </header>
     <section>
-        
-    </section>
-    <footer>
-        <div class="bottom-cont">
-            <a> Terms & Conditions apply</a>
-            <a> &copy; 2019 Questioner Inc.</a>
-            <a> All Rights Reserved </a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>  
+        <div class="sign-con">
+            <div class="signupform">
+                <form method="post" action="signup.html">
+                    <div class="box">
+                        <h1><i class="fas fa-users"></i> Questioner</h1>       
+                        <img src="images/man.svg" alt="person image" class="image">            
+                        <p>Create an account</p>
+                        <div class="fields">
+                            <input type="email" class="input" placeholder="Email" required>
+                        </div>         
+                        <div class="fields">
+                            <input type="text" class="input" placeholder="Username">
+                        </div>        
+                        <div class="fields">
+                            <input type="password" class="input" placeholder="Password">
+                        </div>       
+                        <div  class="fields">
+                            <input type="password" class="input" placeholder="Repeat Password">
+                        </div>       
+                        <div class="button">
+                            <a href="#" class="signupbtn"> Sign Up </a>
+                        </div>         
+                            <p>Already have an account? <a class="signin" href="#">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
-    </footer> 
+    </section>
 </body>
 </html>
