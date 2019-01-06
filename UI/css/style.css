@@ -22,7 +22,10 @@ header a{
     color: whitesmoke;
 }
 nav ol{
-    float: left;
+    float: right;
+}
+.sign{
+    float: right;
 }
 header li{
     display: inline;
