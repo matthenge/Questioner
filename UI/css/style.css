@@ -48,7 +48,7 @@ header .signnav{
 header .loginav{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 650px;
+    grid-gap: 725px;
 }
 footer{
     text-align: center;
