@@ -1,0 +1,102 @@
+
+header{
+    text-decoration: none;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    overflow: hidden;
+    background-color: rgb(26, 94, 94);
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(26, 114, 77, 0.2), 0 6px 20px 0 rgba(2, 150, 105, 0.19);
+}
+header a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+#logo{
+    padding-left: 5px;
+}
+.brand{
+    font-family: 'Itim', cursive;
+    font-size: 35px;
+    color: whitesmoke;
+}
+nav ol{
+    float: left;
+}
+header li{
+    display: inline;
+    padding: 2px;
+    font-size: 18px;
+}
+header .navbar{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+footer{
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    font-weight: bold;
+    background-color: rgb(26, 94, 94);
+    width: 99%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(26, 114, 77, 0.2), 0 6px 20px 0 rgba(2, 150, 105, 0.19);
+}
+footer a{
+    padding: 10px;
+    color: whitesmoke;
+}
+section{
+    padding-bottom: 40px;
+}
+.main{
+    background-color:rgb(12, 167, 159);
+    padding: 120px;
+    text-align: center;
+}
+.main a{
+    text-align: center;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Happy Monkey', cursive;
+}
+.main ul{
+    text-decoration: none;
+    list-style: none;
+}
+.main li{
+    padding: 8px;
+    text-decoration: none;
+}
+.description{
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+.join{
+    border: 2px solid;
+    border-radius: 5px;
+    padding:2px 18px 2px 18px;
+    font-size: 20px;
+}
+.last-row{
+    background-color: whitesmoke;
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    color: rgb(26, 94, 94);
+    text-align: center;
+}
+.step{
+    border-radius: 5px;
+    border-color: rgb(12, 167, 159);
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(27, 153, 100, 0.2), 0 6px 20px 0 rgba(7, 230, 181, 0.19);
+    padding: 20px;
+    width: 30%;
+}
+.step:hover{
+    transform: translateY(-1.5rem) scale(1.03);
+}
