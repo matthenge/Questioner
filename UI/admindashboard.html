@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Questioner</title>
+    <title>Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Concert+One|Happy+Monkey|Itim" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="js/main.js"></script>
 </head>
 <body>
     <header>
@@ -17,8 +18,19 @@
             </div>
             <nav>
                 <ol>
-                    <li><a class="btn" href="#"><i class="fas fa-search" ></i><input type="text" size="30" class="search" placeholder="Search"></a></li>
-                    <li><a class="btn" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                    <li><a class="dashbtn" href="meetups.html"><i class="fas fa-plus"></i> New Meetup</a></li>
+                    <li><a class="dashbtn" href="#"><i class="fas fa-bell"></i> Notifications</a></li>
+                    <li><a class="dashbtn" href="#"><i class="fas fa-envelope"></i> Messages</a></li>
+                    <li>
+                        <div class="menu">
+                            <a onclick="myFunction()" class="dashbtn"><i class="fa fa-fw fa-user"></i>Admin</a>
+                            <div id="myMenu" class="menu-items">
+                              <a href="#">Profile</a>
+                              <a href="#">Settings</a>
+                              <a href="#">Log out</a>
+                            </div>
+                        </div>
+                    </li>
                 </ol>
             </nav>
         </div>
