@@ -252,7 +252,8 @@ a.signupbtn{
     order: 2;
     flex: 3;
     background-color: rgb(235, 231, 231);
-    padding: 4px;
+    padding: 2px;
+    display: flex;
 }
 .left-sidebar{
     order: 1;
@@ -261,22 +262,33 @@ a.signupbtn{
     text-decoration: none;
     font-size: 22px;
 }
-.left-sidebar li{
-    text-decoration: none;
-    padding-bottom: 10px;
-}
 .left-sidebar a{
     text-decoration: none;
     color: rgb(211, 209, 209);
+    padding-bottom: 20px;
+    display: block;
+    padding-left: 5px;
+    padding-top: 5px;
 }
 .left-sidebar a:hover{
     text-decoration: none;
     color: wheat;
-    transform: translateY(-1.5rem) scale(1.03);
+    border: 2px solid wheat;
 }
 .right-sidebar{
     order: 3;
     flex: 1;
-    border: solid;
+    background-color: rgb(12, 167, 159);
     border-color: black;
+    text-align: center;
+    color: wheat;
+}
+.profile{
+    text-align: center;
+    order: 1;
+    flex: 1;
+}
+.content{
+    order: 2;
+    flex: 2;
 }
