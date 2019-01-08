@@ -255,6 +255,12 @@ a.signupbtn{
     padding: 2px;
     display: flex;
 }
+.meetups-col{
+    order: 2;
+    flex: 3;
+    background-color: rgb(235, 231, 231);
+    padding: 2px;
+}
 .left-sidebar{
     order: 1;
     flex: 1;
@@ -311,4 +317,36 @@ a.signupbtn{
 }
 .meetupbtn{
     padding-top: 20px;
+}
+.tags li{
+    display: inline;
+    text-decoration: none;
+}
+.tags ul{
+    text-decoration: none;
+}
+.one-meetup{
+    padding-left: 5px;
+    color: rgb(26, 94, 94);
+    border-top: 1px solid rgb(26, 94, 94);
+    padding-bottom: 20px;
+}
+.delbtn{
+    display: inline;
+}
+a.delete{
+    padding:10px 20px 10px 20px;
+    margin: 5px;
+    border-radius:2em;
+    border:solid;
+    border-color: whitesmoke;
+    box-sizing: border-box;
+    text-decoration:none;
+    cursor: pointer;
+    font-weight: 600;
+    color:whitesmoke;
+    background-color: rgb(216, 8, 8);
+    text-align: center;
+    transition-duration: 0.2s;
+    box-shadow: 0 4px 8px 0 rgba(39, 65, 57, 0.294), 0 6px 20px 0 rgba(13, 114, 75, 0.294);    
 }
