@@ -261,6 +261,37 @@ a.signupbtn{
     background-color: rgb(235, 231, 231);
     padding: 2px;
 }
+.meet-details{
+    order: 1;
+    flex: 1;
+    background-color: rgb(235, 231, 231);
+    padding: 2px;
+    display: flex;
+}
+.meetup-qs{
+    order: 2;
+    flex: 2;
+    background-color: rgb(235, 231, 231);
+    text-decoration: none;
+    font-size: 22px;
+    border-left: 1px solid rgb(12, 167, 159);
+}
+.feeds-bar{
+    order: 3;
+    flex: 1;
+    background-color: rgb(235, 231, 231);
+    border-left: 1px solid rgb(12, 167, 159);
+    text-align: left;
+    color: rgb(26, 94, 94);
+    text-decoration: none;
+}
+.feeds-bar h3{
+    padding-left: 4px;
+}
+.social{
+    padding-top: 6px;
+    padding-left: 4px;
+}
 .left-sidebar{
     order: 1;
     flex: 1;
@@ -330,6 +361,10 @@ a.signupbtn{
     border-top: 1px solid rgb(26, 94, 94);
     padding-bottom: 20px;
 }
+.one-meetup h3{
+    text-align: center;
+    text-decoration: underline;
+}
 .delbtn{
     display: inline;
 }
@@ -348,4 +383,44 @@ a.delete{
     text-align: center;
     transition-duration: 0.2s;
     box-shadow: 0 4px 8px 0 rgba(39, 65, 57, 0.294), 0 6px 20px 0 rgba(13, 114, 75, 0.294);    
+}
+a.upvote{
+    margin: 5px;
+    box-sizing: border-box;
+    text-decoration:none;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgb(26, 94, 94);
+    text-align: center;
+    transition-duration: 0.2s;
+}
+a.downvote{
+    margin: 5px;
+    box-sizing: border-box;
+    text-decoration:none;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgb(199, 7, 7);
+    text-align: center;
+    transition-duration: 0.2s;
+}
+a.comment{
+    margin: 5px;
+    box-sizing: border-box;
+    text-decoration:none;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgb(26, 94, 94);
+    text-align: center;
+    transition-duration: 0.2s;
+}
+a.submit{
+    margin: 5px;
+    box-sizing: border-box;
+    text-decoration:none;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgb(26, 94, 94);
+    text-align: center;
+    transition-duration: 0.2s;
 }
