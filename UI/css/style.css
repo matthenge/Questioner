@@ -255,6 +255,12 @@ a.signupbtn{
     padding: 2px;
     display: flex;
 }
+.question-col{
+    order: 2;
+    flex: 3;
+    background-color: rgb(235, 231, 231);
+    padding: 2px;
+}
 .meetups-col{
     order: 2;
     flex: 3;
