@@ -452,6 +452,9 @@ a.submit{
     .meetups-col,
     .question-col,
     .meetup-qs,
+    .feeds-bar,
+    .left-sidebar,
+    .right-sidebar,
     .profile,
     .content{
         width: 100%;
