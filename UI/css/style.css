@@ -243,8 +243,6 @@ a.signupbtn{
 }
 .parent-col{
     margin: 90px 0px 20px 0px;
-    display: flex;
-    width: 100%;
     padding: 6px;
     text-decoration: none;
 }
@@ -272,7 +270,6 @@ a.signupbtn{
     flex: 1;
     background-color: rgb(235, 231, 231);
     padding: 2px;
-    display: flex;
 }
 .meetup-qs{
     order: 2;
@@ -429,4 +426,38 @@ a.submit{
     color: rgb(26, 94, 94);
     text-align: center;
     transition-duration: 0.2s;
+}
+@media only screen and (min-width: 900px){
+    .parent-col{
+        display: flex;
+        width: 100%;
+    }
+    .meet-details{
+        display: flex;
+    }
+}
+@media only screen and (max-width: 768px){
+    header,
+    header .navbar,
+    header .signnav,
+    header .loginav,
+    header .adminnav,
+    footer,
+    .last-row,
+    .step, 
+    .box, 
+    .adminbox,
+    .reset,
+    .main-col,
+    .meetups-col,
+    .question-col,
+    .meetup-qs,
+    .feeds-bar,
+    .left-sidebar,
+    .right-sidebar,
+    .profile,
+    .content{
+        width: 100%;
+        text-align: center;
+    }
 }
