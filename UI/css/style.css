@@ -345,7 +345,7 @@ a.delete{
     cursor: pointer;
     font-weight: 600;
     color:whitesmoke;
-    background-color: rgb(216, 8, 8);
+    background-color: rgb(199, 7, 7);
     text-align: center;
     transition-duration: 0.2s;
     box-shadow: 0 4px 8px 0 rgba(39, 65, 57, 0.294), 0 6px 20px 0 rgba(13, 114, 75, 0.294);    
