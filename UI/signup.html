@@ -26,31 +26,44 @@
     <section>
         <div class="sign-con">
             <div class="signupform">
-                <form method="post" action="signup.html">
+                <form method="POST" action="signup.html" id="addUser">
                     <div class="box">
                         <h1><i class="fas fa-users"></i> Questioner</h1>       
-                        <img src="images/man.svg" alt="person image" class="image">            
+                        <img src="images/man.svg" alt="person image" class="image" required>            
                         <p>Create an account</p>
                         <div class="fields">
-                            <input type="email" class="input" placeholder="Email" required>
+                            <input type="text" id="firstname" class="input" placeholder="Firstname" required>
+                        </div>
+                        <div class="fields">
+                            <input type="text" id="lastname" class="input" placeholder="Lastname" required>
+                        </div>
+                        <div class="fields">
+                            <input type="text" id="othername" class="input" placeholder="Othername" required>
+                        </div>
+                        <div class="fields">
+                            <input type="email" id="email" class="input" placeholder="Email" required>
+                        </div>
+                        <div class="fields">
+                            <input type="text" id="phone" class="input" placeholder="Phone Number" required>
                         </div>         
                         <div class="fields">
-                            <input type="text" class="input" placeholder="Username">
+                            <input type="text" id="username" class="input" placeholder="Username" required>
                         </div>        
                         <div class="fields">
-                            <input type="password" class="input" placeholder="Password">
+                            <input type="password" id="password" class="input" placeholder="Password" required>
                         </div>       
                         <div  class="fields">
-                            <input type="password" class="input" placeholder="Confirm Password">
+                            <input type="password" id="confirm_password" class="input" placeholder="Confirm Password" required>
                         </div>       
-                        <div class="button">
-                            <a href="#" class="signupbtn"> Sign Up </a>
+                        <div>
+                            <button id="registerbtn" type="submit" class="button"> Sign Up </button>
                         </div>         
-                            <p>Already have an account? <a class="signin" href="#">Sign In</a></p>
+                            <p>Already have an account? <a class="signin" href="login.html">Sign In</a></p>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 </body>
+<script src="js/main.js"></script>
 </html>
