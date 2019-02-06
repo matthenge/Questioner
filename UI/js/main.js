@@ -17,37 +17,32 @@ function myFunction() {
 var register = document.getElementById('registerbtn');
 function signup(event) {
   event.preventDefault();
-  let firstname = document.getElementById('firstname').value;
-  let lastname = document.getElementById('lastname').value;
-  let othername = document.getElementById('othername').value;
-  let email = document.getElementById('email').value;
-  let phoneNumber = document.getElementById('phone').value;
-  let username = document.getElementById('username').value;
-  let password = document.getElementById('password').value;
-  let confirm_password = document.getElementById('confirm_password').value;
-  fetch('https://questioner-v2.herokuapp.com/api/v2/auth/signup', {
+  let signdata = {
+      firstname: document.getElementById('firstname').value,
+      lastname: document.getElementById('lastname').value,
+      othername: document.getElementById('othername').value,
+      email: document.getElementById('email').value,
+      phoneNumber: document.getElementById('phone').value,
+      username: document.getElementById('username').value,
+      password: document.getElementById('password').value,
+      confirm_password: document.getElementById('confirm_password').value
+};
+  fetch(' http://127.0.0.1:5000/api/v2/auth/signup', {
     mode:'cors',
     method:'POST',
     headers: {
         'Accept': 'application/json',
         'Content-type': 'application/json'
     },
-    body: JSON.stringify({
-      firstname: firstname,
-      lastname: lastname,
-      othername: othername,
-      email: email,
-      phoneNumber: phoneNumber,
-      username: username,
-      password: password,
-      confirm_password: confirm_password
-    })
+    body: JSON.stringify(signdata)
   })
   .then((resp) => resp.json())
   .then((data) => {
-    if (data.status == 200){
-      window.location.href = 'userdashboard.html'
-      window.alert(data.data)
+    if (data.status === 201){
+      window.location.href = "http://127.0.0.1:5500/UI/userdashboard.html";
+      localStorage.setItem('token', data.token);
+      console.log(resp.status)
+      console.log(resp.data)
     }else{
       window.alert(data.error);
     }
