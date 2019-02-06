@@ -33,14 +33,14 @@
                         <img src="images/man.svg" alt="person image" class="image">            
                         <p>Log in</p>
                         <div class="fields">
-                            <input type="email" class="input" placeholder="Enter your Email" required>
+                            <input type="text" id="username" class="input" placeholder="Enter your Username" required>
                         </div>                 
                         <div class="fields">
-                            <input type="password" class="input" placeholder="Enter your Password">
+                            <input type="password" id="password" class="input" placeholder="Enter your Password">
                             <p><a class="signin" href="passwordreset.html">Forgot Password?</a></p>
                         </div>        
-                        <div class="button">
-                            <a href="userdashboard.html" class="signupbtn"> Log in </a>
+                        <div>
+                            <button id="loginbtn" class="button"> Log in </button>
                         </div>         
                             <p>Not registered? <a class="signin" href="signup.html">Sign Up</a></p>
                     </div>
@@ -49,4 +49,5 @@
         </div>
     </section>
 </body>
+<script src="js/login.js"></script>
 </html>
