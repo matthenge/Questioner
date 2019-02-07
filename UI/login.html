@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Questioner</title>
+    <title>Sign In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Concert+One|Happy+Monkey|Itim" rel="stylesheet">
@@ -33,14 +33,14 @@
                         <img src="images/man.svg" alt="person image" class="image">            
                         <p>Log in</p>
                         <div class="fields">
-                            <input type="email" class="input" placeholder="Enter your Email" required>
+                            <input type="text" id="username" class="input" placeholder="Enter your Username" required>
                         </div>                 
                         <div class="fields">
-                            <input type="password" class="input" placeholder="Enter your Password">
+                            <input type="password" id="password" class="input" placeholder="Enter your Password">
                             <p><a class="signin" href="passwordreset.html">Forgot Password?</a></p>
                         </div>        
-                        <div class="button">
-                            <a href="userdashboard.html" class="signupbtn"> Log in </a>
+                        <div>
+                            <button id="loginbtn" class="button"> Log in </button>
                         </div>         
                             <p>Not registered? <a class="signin" href="signup.html">Sign Up</a></p>
                     </div>
@@ -48,5 +48,7 @@
             </div>
         </div>
     </section>
+    <div id="snackbar"></div>
 </body>
+<script src="js/auth.js"></script>
 </html>
