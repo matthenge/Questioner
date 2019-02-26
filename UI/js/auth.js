@@ -1,6 +1,14 @@
 var register = document.getElementById('registerbtn');
 var sign = document.getElementById('loginbtn');
+var resetreq = document.getElementById('resetbtn');
+var respass = document.getElementById('updatebtn')
 const dashurl = "https://matthenge.github.io/Questioner/UI/userdashboard.html"
+const loginurl = "https://matthenge.github.io/Questioner/UI/login.html"
+const signurl = "https://questioner-v2.herokuapp.com/api/v2/auth/signup"
+const logurl = "https://questioner-v2.herokuapp.com/api/v2/auth/login"
+const resurl = "https://questioner-v2.herokuapp.com/api/v2/auth/reset_password"
+
+//User Signup
 
 function signup(event) {
   event.preventDefault();
@@ -14,12 +22,13 @@ function signup(event) {
       password: document.getElementById('password').value,
       confirm_password: document.getElementById('confirm_password').value
 };
-  fetch("https://questioner-v2.herokuapp.com/api/v2/auth/signup", {
+  fetch(signurl, {
     mode:'cors',
     method:'POST',
     headers: {
         'Accept': 'application/json',
-        'Content-type': 'application/json'
+        'Content-type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
     },
     body: JSON.stringify(signdata)
   })
@@ -39,18 +48,21 @@ function signup(event) {
   .catch((error) => console.error(error))
 }
 
+//User Login
+
 function login(event) {
   event.preventDefault();
   let logindata = {
       username: document.getElementById('username').value,
       password: document.getElementById('password').value
 };
-  fetch("https://questioner-v2.herokuapp.com/api/v2/auth/login", {
+  fetch(logurl, {
     mode:'cors',
     method:'POST',
     headers: {
         'Accept': 'application/json',
-        'Content-type': 'application/json'
+        'Content-type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
     },
     body: JSON.stringify(logindata)
   })
@@ -70,7 +82,74 @@ function login(event) {
   .catch((error) => console.error(error))
 }
 
-//Snackbar for errors
+//Reset Password Request
+function resetRequest(event) {
+  event.preventDefault();
+  let resetReqdata = {
+      email: document.getElementById('email').value
+};
+  fetch(resurl, {
+    mode:'cors',
+    method:'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+    },
+    body: JSON.stringify(resetReqdata)
+  })
+  .then((resp) => resp.json())
+  .then((data) => {
+    if (data.status === 200){
+      snackBar(data.message);
+      console.log(resp.status)
+      console.log(resp.data)
+    }else{
+      snackBar(data.error);
+    }
+  })
+  .catch((error) => console.error(error))
+}
+
+//Change Password
+function resetPswrd(event) {
+  event.preventDefault();
+  var url = window.location.href;
+  var urlstr = url.split("&");
+  var token = urlstr[0].split('=')[1];
+  localStorage.setItem('token', token);
+  let resetdata = {
+    password: document.getElementById('password').value,
+    confirm_password: document.getElementById('confirm_password').value
+};
+  fetch(resurl, {
+    mode:'cors',
+    method:'PUT',
+    headers: {
+        'Accept': 'application/json',
+        'Content-type': 'application/json',
+        'x-reset-token': localStorage.token,
+        'Access-Control-Allow-Origin': '*'
+    },
+    body: JSON.stringify(resetdata)
+  })
+  .then((resp) => resp.json())
+  .then((data) => {
+    if (data.status === 200){
+      window.setTimeout(function () {
+        location.href = loginurl;
+      }, 1000);
+      snackBar(data.message);
+      console.log(resp.status)
+      console.log(resp.data)
+    }else{
+      snackBar(data.error);
+    }
+  })
+  .catch((error) => console.error(error))
+}
+
+//Snackbar for messages
 var snack = document.getElementById("snackbar");
 
 function snackBar(content) {
@@ -84,4 +163,8 @@ if (documentTitle == "Sign Up"){
   register.addEventListener('click', signup);
 } else if (documentTitle == "Sign In"){
   sign.addEventListener('click', login);
+} else if (documentTitle == "Forgot Password"){
+  resetreq.addEventListener('click', resetRequest);
+} else if (documentTitle == "Reset Password"){
+  respass.addEventListener('click', resetPswrd);
 }
