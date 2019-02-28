@@ -23,12 +23,10 @@ function signup(event) {
       confirm_password: document.getElementById('confirm_password').value
 };
   fetch(signurl, {
-    mode:'cors',
     method:'POST',
     headers: {
         'Accept': 'application/json',
-        'Content-type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Content-type': 'application/json'
     },
     body: JSON.stringify(signdata)
   })
@@ -57,12 +55,10 @@ function login(event) {
       password: document.getElementById('password').value
 };
   fetch(logurl, {
-    mode:'cors',
     method:'POST',
     headers: {
         'Accept': 'application/json',
-        'Content-type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Content-type': 'application/json'
     },
     body: JSON.stringify(logindata)
   })
@@ -89,12 +85,10 @@ function resetRequest(event) {
       email: document.getElementById('email').value
 };
   fetch(resurl, {
-    mode:'cors',
     method:'POST',
     headers: {
         'Accept': 'application/json',
-        'Content-type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Content-type': 'application/json'
     },
     body: JSON.stringify(resetReqdata)
   })
@@ -123,13 +117,11 @@ function resetPswrd(event) {
     confirm_password: document.getElementById('confirm_password').value
 };
   fetch(resurl, {
-    mode:'cors',
     method:'PUT',
     headers: {
         'Accept': 'application/json',
         'Content-type': 'application/json',
-        'x-reset-token': localStorage.token,
-        'Access-Control-Allow-Origin': '*'
+        'x-reset-token': localStorage.token
     },
     body: JSON.stringify(resetdata)
   })
